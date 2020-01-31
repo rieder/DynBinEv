@@ -21,7 +21,7 @@ def evolve_model(end_time, double_star, stars):
     t = [] | units.yr
     while time < end_time:
         time += dt
-        gravity.evolve_model(1 | units.yr)
+        gravity.evolve_model(time)
         to_stars.copy()
         orbital_elements = orbital_elements_from_binary(stars,
                                                         G=constants.G)
